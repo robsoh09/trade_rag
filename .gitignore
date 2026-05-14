@@ -1,2 +1,4 @@
 exclude/
-
+.pandas/
+pandas/
+__pycache__/
