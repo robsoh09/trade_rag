@@ -65,8 +65,20 @@ def get_pnl(conn):
 
 def get_trades(conn):
 
-   sql = """SELECT * FROM trades ORDER BY date;
-            """
+    #SELECT trades where these columns and order by date    
+   sql = """SELECT
+       trade_id,
+       date,
+       ticker,
+       direction,
+       pnl,
+       rule_followed,
+       main_tag,
+       confidence_before_entry,
+       one_line_lesson
+       FROM trades
+       ORDER BY date;"""
+       
    cursor = conn.cursor()
    cursor.execute(sql)
    rows = cursor.fetchall()
