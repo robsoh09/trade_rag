@@ -1,14 +1,19 @@
-from sql import connect_db, sql_count ,get_pnl,get_trades
-DB_NAME = 'trade.db'
+from sql import connect_db, sql_count, get_pnl, get_trades
+
+
+DB_NAME = "trade.db"
+
+
 conn = connect_db(DB_NAME)
-print(conn)
 
+trade_count = sql_count(conn)
+print("Trade count:", trade_count)
 
-info = sql_count(conn)
-print(info)
+total_pnl = get_pnl(conn)
+print("Total PnL:", total_pnl)
 
-pnl = get_pnl(conn)
-print(pnl)
+trades = get_trades(conn)
+print("Trades:")
+print(trades)
 
-get_trade = get_trades(conn)
-print(get_trade)
+conn.close()
