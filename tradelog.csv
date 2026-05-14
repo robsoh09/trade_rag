@@ -1,0 +1,17 @@
+trade_id,date,ticker,direction,pnl,rule_followed,main_tag,confidence_before_entry,one_line_lesson
+1,2026-05-01, usar ,long,$100.00,yes,followed_plan,High,I waited for the setup and exited well
+2,2026/05/01,USAR,LONG,-$50.00,Y,failed_to_cut,medium,I hesitated when the trade failed
+3,01-05-2026,cohr,Short,$250.00,no,followed_plan,LOW,I took the trade but broke one rule
+4,2026-05-02,COHR,SHORT,-$120.00,N,oversized,low,Size made me hesitate
+5,2026-05-02, rgti ,BUY,$80.00,True,good_cut,High,I cut quickly when momentum slowed
+6,2026-05-03,RGTI,SELL,-$200.00,False,held_after_invalidation,Medium,I refused the small loss
+7,2026-05-03,tsla,buy,$300.00,yes,chased_entry,medium,I chased but the trade worked
+8,2026-05-04,NVDA,sell,-$90.00,no,late_cut,LOW,I cut late after invalidation
+9,2026-05-04, amd ,Long,$0.00,,unclear_setup,low,I was unsure but still entered
+10,2026-05-05,META,,profit,Y,invalid_pnl,High,Invalid test row
+11,not_a_date,AAPL,LONG,$85.00,YES,followed_plan,High,Date is invalid
+12,2026-05-06,MSFT,SHORT,-$42.00,NO,good_cut,Medium,I respected the exit
+12,2026-05-06,MSFT,SHORT,-$42.00,NO,good_cut,Medium,Duplicate row test
+13,2026-05-07,,LONG,$150.00,YES,missing_ticker,High,Ticker is missing
+14,2026-05-07,NFLX,HOLD,$60.00,YES,invalid_direction,Medium,Direction is invalid
+15,2026-05-08,PLTR,LONG,,NO,missing_pnl,Low,PnL is missing
