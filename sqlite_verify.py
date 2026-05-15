@@ -17,9 +17,9 @@ for row in trades:
     #(1, '2026-05-01', 'USAR', 'LONG', 100.0, 'YES', 'followed_plan', 'High', 'I waited for the setup and exited well')
     trade_info = {    
 
-        "id": "trade_" + str(count),
-        #strip whitespace.
+        "id": "trade_" + str(count), #uniqueId generation 
         "document" : f"""Trade ID: {row[0]} Date: {row[1]}Ticker: row[2]Direction: {row[3]}PnL: {row[4]}Rule Followed: {row[5]}Main Tag: {row[6]}Confidence Before Entry: {row[7]}Lesson: {row[8]}""".strip(),
+        #strip whitespace when using f"""
         "metadata" : {
             "trade_id": row[0],
             "date": row[1],
@@ -31,9 +31,11 @@ for row in trades:
             }
         }
     trade_list.append(trade_info)
-    count += 1
+    count += 1 #generate unique trade_id as cleaned up trade Ids may not be in seq. 
 
 print(trade_list[0])
 print(len(trade_list))
 for item in trade_list:
     print(item["id"], item["metadata"]["trade_id"])
+
+    
